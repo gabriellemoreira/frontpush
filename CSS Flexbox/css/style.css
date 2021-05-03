@@ -9,3 +9,127 @@ body{
     height: 100%;
     background-color: #0c0c0c;
 }
+
+header{
+    height: 72px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #040404;
+    align-items: center;
+}
+
+.nav{
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.nav-logo{
+    width: 48px;
+    height: 48px;
+    background-color: yellow;
+    border-radius: 10px;
+}
+
+.nav-menu{
+    list-style: none;
+    display: flex;
+}
+
+.nav-item{
+    margin: 0px 16px;
+}
+
+.nav-link{
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #ccc;
+    transition: .5s ease;
+}
+
+.nav-link:hover{
+    opacity: 0.8;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex; 
+    /* quando defino um display: flex no pai, 
+    automaticamente os filhos diretos se tornam 
+    flex-items e em row */
+    padding: 8px 16px;
+    flex-direction: row;
+    /* flex-wrap: wrap;  */
+    /* quebrar quando chega no valor do flex-basis (valor fixo em px)
+    do .container-item-1*/
+}
+
+@media screen and (max-width: 960px) {
+    .container{
+        flex-direction: column;
+    }    
+}
+
+.container-item-1{
+    flex: 6 1 auto; 
+    /* 6: grow | 1: shrink | auto: basis 
+    a partir do grow nos flex-items consigo definir o grid*/
+    margin-right: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0px;
+}
+
+.video-main{
+    background-color: #ccc;
+    width: 100%;
+    border-radius: 10px;
+    height: 540px;
+}
+
+.container-item-2{
+    flex: 1 1 200px;
+    /* background-color: #777; */
+    margin-left: 8px;
+    padding: 16px 0px;
+}
+
+h3{
+    line-height: 130%;
+    margin: 4px 0px;
+    color: #fff;
+}
+
+h4{
+    color: #fff;
+}
+
+p{
+    color: #777;
+}
+
+.video-side{
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.video-side .thumb{
+    width: 150px;
+    height: 110px;
+    background-color: #ccc;
+    border-radius: 10px;
+    flex: 1 1 auto;
+    margin-right: 8px;
+}
+
+.video-side .description{
+    flex: 1 1 auto;
+    margin-left: 8px;
+}
